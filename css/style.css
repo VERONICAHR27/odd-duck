@@ -1,0 +1,90 @@
+
+header{
+    display: flex;
+    width: 90%;
+    padding-top: 20px; 
+    margin-bottom: 30px;
+}
+header img{
+    width: 15%;
+    margin-left: 80px;   
+}
+header h1{
+    font-family:fantasy;
+    font-size: 50px;
+    color: rgb(66, 41, 209);
+    padding-left: 29%;
+    font-weight: bold;
+}
+main{
+    display: grid;
+    grid-template-columns: 20% auto;
+    gap: 30px;
+    width: 90%;
+    height: 100%;
+    margin-inline: auto;
+}
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 30px;
+    color:royalblue;
+}
+
+section { 
+    padding: 15px;    
+}
+
+.Item{
+    border: 4px solid rgb(42, 86, 233);  
+}
+
+div{
+    display: flex;
+    justify-content: space-around;
+}
+
+ul{
+    padding: 10% 0% 0 20%;         
+}
+
+ul >li{
+    list-style-type:disc;
+    padding: 4px;
+    font-size: 15px;
+    line-height: 10px;
+}
+
+#opcion1,#opcion2,#opcion3{
+    width: 300px;
+    height: 250px;
+    cursor: pointer;
+    border: 5px solid rgb(66, 41, 209);
+    border-radius: 10%;
+}
+
+article{
+    margin-top: 5%;
+    text-align: justify;
+    border: 5px solid rgb(66, 41, 209);
+}
+
+article p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align:justify;
+    padding: 20px;
+    line-height: 23px;   
+}
+
+footer {
+    background-color:gainsboro;
+    text-align: center;
+    margin-top: 10px; 
+    padding: 15px;
+  }
+  
+  footer p {
+    color: rgb(91, 91, 91);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+  }
