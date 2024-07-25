@@ -6,3 +6,6 @@
 
 ##Laboratorio 12
 ![image](/img/Laboratorio12.PNG)
+
+##Laboratorio 13
+![image](/img/Laboratorio13.PNG)

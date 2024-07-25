@@ -35,8 +35,6 @@ class Products {
     }
 };
 
-
-
 function fileMaker() {
     for (let i = 0; i < img.length; i++) {
         let file = new Products(img[i], `./img/${img[i]}.jpg`);
@@ -92,6 +90,7 @@ function handleClick() {
                 const index = img.indexOf(imgName)
                 state.arrayProducts[index].vote++
                 state.arrayProducts[index].renderVotes();
+              saveLocalStorage();
                 objRender();
                 clean();
                 renderChart();
@@ -99,6 +98,23 @@ function handleClick() {
         });
     }
 }
+
+function saveLocalStorage() {
+    const products = JSON.stringify(state.arrayProducts);
+    localStorage.setItem('datos', products);
+  }
+  
+  function loadFromLocalStorage() {
+    const savedProducts = localStorage.getItem('file');
+    if (savedProducts) {
+      const parsedProducts = JSON.parse(savedProducts);
+      parsedProducts.forEach(file => {
+        state.arrayProducts.push(new Products(file.name, file.route, file.vote, file.views));
+      });
+    } else {
+      fileMaker();
+    }
+  }
 
 function renderChart() {
     const graphic = document.getElementById('canvas').getContext('2d');
@@ -155,7 +171,7 @@ function renderChart() {
 
     });
 }
-
+loadFromLocalStorage();
 fileMaker();
 objRender();
 renderChart();
